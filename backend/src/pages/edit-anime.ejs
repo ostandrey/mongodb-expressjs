@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Add anime</title>
+    </head>
+    <body>
+        <h1>Add anime</h1>
+        <form action="/add-anime" method="POST">
+            <div>
+                <label>Name</label>
+                <input type="text" name="name" required />
+            </div>
+            <div>
+                <label>Image</label>
+                <input type="text" name="image" required />
+            </div>
+            <div>
+                <label>Description</label>
+                <input type="text" name="description" required />
+            </div>
+            <div>
+                <button type="submit">Add anime</button>
+            </div>
+        </form>
+    </body>
+</html>
