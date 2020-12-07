@@ -37,3 +37,18 @@ exports.postAnime = (req, res) => {
     console.log('anime added to the database');
     res.status(201).redirect('/')
 };
+
+exports.postDelete = async (req, res) => {
+    const animeId = req.body.animeId;
+
+    const anime = await Anime.findByIdAndRemove(animeId, (data) => data);
+
+    try {
+        console.log(anime);
+        console.log('Item deleted');
+        res.redirect('/');
+    }
+    catch (error) {
+        console.log(error);
+    }
+};

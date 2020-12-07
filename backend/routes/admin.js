@@ -7,5 +7,6 @@ router.get('/', adminController.getIndex);
 router.get('/add-anime', adminController.getAddAnime);
 router.post('/add-anime', adminController.postAnime);
 router.get('/:animeId', adminController.getAnime);
+router.post('/delete', adminController.postDelete);
 
 module.exports = router;
